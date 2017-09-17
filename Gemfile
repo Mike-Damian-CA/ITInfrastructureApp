@@ -56,3 +56,5 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'simple_form'
+gem 'sprockets'
+gem 'sprockets-rails'
