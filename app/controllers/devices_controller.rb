@@ -3,6 +3,7 @@ class DevicesController < ApplicationController
 
   # GET /devices
   # GET /devices.json
+
   def index
     @devices = Device.all
   end
