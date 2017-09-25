@@ -11,6 +11,8 @@
         <th>Updated At</th>
         <th>Name</th>
         <th>Location</th>
+        <th>Device Type</th>
+        <th>Serial Number</th>
         <th colspan="3">Actions</th>
       </tr>
     </thead>
@@ -23,6 +25,8 @@
           <td><%= device.updated_at %></td>
           <td><%= device.name %></td>
           <td><%= device.location %></td>
+          <td><%= device.device_type %></td>
+          <td><%= device.serial_number%></td>
           <td><%= link_to 'Show', device %></td>
           <td><%= link_to 'Edit', edit_device_path(device) %></td>
           <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>

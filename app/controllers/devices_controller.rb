@@ -70,6 +70,6 @@ class DevicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def device_params
-      params.fetch(:device).permit(:name, :location)
+      params.fetch(:device).permit(:name, :location, :device_type, :serial_number)
     end
 end
