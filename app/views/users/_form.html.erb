@@ -6,7 +6,7 @@
 
   <div class="form-actions">
     <%= f.input :name %>
-    <%= f.input :dob %>
+    <%= f.input :dob, start_year: Date.today.year - 110, end_year: Date.today.year %>
     <%= f.input :phone %>
     <%= f.input :mobile %>
     <%= f.input :email %>
