@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170928013130) do
+ActiveRecord::Schema.define(version: 20170930000402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20170928013130) do
     t.string "location", null: false
     t.string "device_type", null: false
     t.string "serial_number"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_devices_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,4 +36,5 @@ ActiveRecord::Schema.define(version: 20170928013130) do
     t.string "email"
   end
 
+  add_foreign_key "devices", "users"
 end

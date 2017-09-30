@@ -26,6 +26,9 @@
        <tr>
          <td><strong>Serial Number</strong></td><td><%= @device.serial_number %></td>
        </tr>
+       <tr>
+         <td><strong>User ID</strong></td><td><%= @device.user_id %></td>
+       </tr>
      </tbody>
    </table>
    <%= link_to 'Edit', edit_device_path(@device), class: "btn btn-md btn-danger" %>

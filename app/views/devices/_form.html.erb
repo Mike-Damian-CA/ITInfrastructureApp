@@ -10,9 +10,11 @@
     <%= f.input :location %>
     <%= f.input :device_type %>
     <%= f.input :serial_number %>
+    <%= f.input :user_id, required: false, hint: 'select user' do %>
+      <%= f.select :user_id, User.order(name: :asc).map { |r| [r.name, r.id] }, include_blank: true %>
+    <% end %>
     <%= f.button :submit %>
   <p></p>
   </div>
-
 
 <% end %>
