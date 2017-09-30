@@ -28,7 +28,7 @@
           <td><%= device.location %></td>
           <td><%= device.device_type %></td>
           <td><%= device.serial_number%></td>
-          <td><%= device.user_id ? device.user.name : nil%></td>
+          <td><%= device.user_id ? (link_to device.user.name, device.user) : nil%></td>
           <td><%= link_to 'Show', device %></td>
           <td><%= link_to 'Edit', edit_device_path(device) %></td>
           <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
