@@ -14,14 +14,13 @@
         <th>Device Type</th>
         <th>Serial Number</th>
         <th>User</th>
-        <th colspan="3">Actions</th>
       </tr>
     </thead>
 
     <tbody>
       <% @devices.each do |device| %>
         <tr>
-          <td style="text-align: right;"><%= device.id %></td>
+          <td style="text-align: right;"><%= link_to device.id, device %></td>
           <td><%= device.created_at %></td>
           <td><%= device.updated_at %></td>
           <td><%= device.name %></td>
@@ -29,9 +28,6 @@
           <td><%= device.device_type %></td>
           <td><%= device.serial_number%></td>
           <td><%= device.user_id ? (link_to device.user.name, device.user) : nil%></td>
-          <td><%= link_to 'Show', device %></td>
-          <td><%= link_to 'Edit', edit_device_path(device) %></td>
-          <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
