@@ -32,7 +32,7 @@
        </tbody>
      </table>
     <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-md btn-danger" %>
-    <%= link_to 'Back', :back, class: "btn btn-md btn-danger" %>
+    <%= link_to 'Back', users_path, class: "btn btn-md btn-danger" %>
     <%= link_to 'Delete', @user, class: "btn btn-md btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 
