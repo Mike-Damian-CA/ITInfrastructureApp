@@ -17,7 +17,7 @@
     </thead>
 
     <tbody>
-      <% @user.each do |user| %>
+      <% @users.each do |user| %>
         <tr>
           <td style="text-align: right;"><%= link_to user.id, user %></td>
           <td><%= user.created_at %></td>
