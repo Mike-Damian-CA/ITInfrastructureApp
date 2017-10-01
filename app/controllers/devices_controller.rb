@@ -5,8 +5,15 @@ class DevicesController < ApplicationController
   # GET /devices.json
 
   def index
-    @devices = Device.all
-  end
+   if params[:search]
+     @search = params[:search]
+     @devices = Device
+     .where("name like '%#{@search}%' or location like '%#{@search}%' or device_type like '%#{@search}%'  or serial_number like '%#{@search}%' or model like '%#{@search}%'")
+     .order(:id).paginate(:page => params[:page], :per_page => params[:per_page])
+   else
+     @devices = Device.order(:id).paginate(:page => params[:page], :per_page => params[:per_page])
+   end
+ end
 
   # GET /devices/1
   # GET /devices/1.json

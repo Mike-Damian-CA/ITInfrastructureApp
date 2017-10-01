@@ -58,3 +58,4 @@ gem "font-awesome-rails"
 gem 'simple_form'
 gem 'sprockets'
 gem 'sprockets-rails'
+gem 'bootstrap-will_paginate'

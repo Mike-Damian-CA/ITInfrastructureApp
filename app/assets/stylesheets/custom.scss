@@ -34,3 +34,17 @@ th {
   background-color: lightgrey;
    text-align: center; /* Or right or left */
 }
+.search {
+   font-size: 0.8em;
+   //float: left;
+   margin-top: 25px;
+   margin-bottom: 5px;
+   margin-left:  -15px;
+   margin-right: 0px;
+   padding: 0px;
+   width: auto !important;
+}
+
+.search_field {
+ padding: 2px;
+}
