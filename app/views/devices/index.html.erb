@@ -12,6 +12,7 @@
         <th>Name</th>
         <th>Location</th>
         <th>Device Type</th>
+        <th>Model</th>
         <th>Serial Number</th>
         <th>User</th>
       </tr>
@@ -26,6 +27,7 @@
           <td><%= device.name %></td>
           <td><%= device.location %></td>
           <td><%= device.device_type %></td>
+          <td><%= device.model %></td>
           <td><%= device.serial_number%></td>
           <td><%= device.user_id ? (link_to device.user.name, device.user) : nil%></td>
         </tr>

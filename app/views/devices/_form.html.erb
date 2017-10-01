@@ -8,8 +8,9 @@
 
     <%= f.input :name %>
     <%= f.input :location %>
-    <%= f.input :device_type, :collection => ['Desktop', 'Laptop', 'Monitor', 'Printer', 'Tablet', 'Smart Phone'], as: :select, include_blank: false, hint: "Select Device Type", label: "Device Type" %>
+    <%= f.input :device_type, :collection => ['Desktop', 'Laptop', 'Monitor', 'Printer', 'Tablet', 'Smart Phone', 'NAS', 'Network'], as: :select, include_blank: false, hint: "Select Device Type", label: "Device Type" %>
     <%= f.input :serial_number %>
+    <%= f.input :model %>
     <%= f.input :user_id, required: false, hint: 'select user' do %>
       <%= f.select :user_id, User.order(name: :asc).map { |r| [r.name, r.id] }, include_blank: true %>
     <% end %>
