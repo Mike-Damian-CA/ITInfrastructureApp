@@ -2,7 +2,7 @@
 lock "3.9.1"
 
 set :application, "ITInfrastructureApp"
-set :repo_url, "git@example.com:Mike-Damian-CA/ITInfrastructureApp.git"
+set :repo_url, "git@github.com:Mike-Damian-CA/ITInfrastructureApp.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
